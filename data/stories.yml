@@ -1,0 +1,32 @@
+version: "2.0"
+
+stories:
+
+# happy path
+- story: happy name path
+  steps:
+  - intent: request_weather
+  - action: weather_form
+  - active_loop: weather_form
+  - active_loop: null
+  - intent: thanks
+  - action: utter_noworries
+
+- story: happy name path
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - active_loop: request_weather
+  - active_loop: weather_form
+  - intent: thanks
+  - action: utter_noworries
+
+- story: chitchat, stop and really stop path
+  steps:
+  - intent: greet
+  - action: utter_answer_greet
+  - chitchat
+  - active_loop: request_weather
+  - active_loop: weather_form
+  - intent: thanks
+  - action: utter_noworries
