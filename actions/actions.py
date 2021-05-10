@@ -50,7 +50,7 @@ class WeatherForm(FormAction):
     def name(self) -> Text:
         """Unique identifier of the form"""
 
-        return "action_weather_form"
+        return "weather_form"
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:

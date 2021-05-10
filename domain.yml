@@ -7,12 +7,13 @@ intents:
   - affirm
   - medical
   - restaurant_search
-  - informr
+  - inform
   - bot_challenge
   - deny
   - thanks
   - chitchat
   - stop
+
 
 entities:
   - date_time
@@ -33,7 +34,7 @@ slots:
 
 
 actions:
-  - action_weather_form
+  - weather_form
   - action_default_fallback
 
 

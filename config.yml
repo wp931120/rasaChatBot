@@ -4,9 +4,9 @@
 language: zh
 pipeline:
   - name: SpacyNLP                   # 预训练词向量
-    model: "data/zh_core_web_md-3.0.0/zh_core_web_md/zh_core_web_md-3.0.0"
+    model: "data/zh_core_web_md-3.0.0"
   - name: SpacyTokenizer          # 文本分词器
-  - name: SpacyEntityExtractor  #文本特征化
+#  - name: SpacyEntityExtractor  #文本特征化
   - name: SpacyFeaturizer         #特征提取器 将一句话变成一个向量
     pooling: mean
 #  - name: CountVectorsFeaturizer  #创建用户信息和标签(意图和响应)的词袋表征 为意图分类和 response selection创建特征
@@ -14,7 +14,7 @@ pipeline:
 #    min_ngram: 1
 #    max_ngram: 4
   - name: DIETClassifier              #意图分类
-    epochs: 10
+    epochs: 100
 #  - name: EntitySynonymMapper   #同义实体
 #  - name: ResponseSelector
 #    epochs: 100

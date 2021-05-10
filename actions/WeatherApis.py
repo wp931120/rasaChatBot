@@ -37,7 +37,7 @@ def get_weather_by_day(location, day=1):
         "location": result["results"][0]["location"],
         "result": result["results"][0]["daily"][day]
     }
-
+    print(normal_result)
     return normal_result
 
 
